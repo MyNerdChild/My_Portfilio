@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*-----Hamburger Menu----*/
+style* { margin: 0 auto; font-family: sans-serif; }
+
+body { margin: 0 auto; }
+
+header > .top {
+	position: absolute;
+	right: 50px;
+}
+header > .top a.menu_icon i {
+	color: white;
+	font-size: 40px;
+	padding-top: 5px;
+	transition: .2s ease;
+}
+header > .top a.menu_icon:hover i {
+	color: gray;
+}
+nav.menu {
+	width: 200px;
+	min-height: calc(97vh - 121px);
+	background-color: black;
+  position: absolute;
+	right: -200px;
+	transition: .4s all;
+  border-radius: 20px;
+}
+nav.menu > a {
+    display: block;
+    padding: 5px;
+    margin: 15px 0 0px 0px;
+    color: gray;
+    text-transform: uppercase;
+}
+main {
+	width: 100%;
+	padding: 300px;
+	box-sizing: border-box;
+}
+.menu_show {
+	right: 0!important;
+}
+@media screen and (max-width: 425px) {
+	header h1 {
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 360px) {
+	nav.menu {
+		width: 100%;
+		left: 100%;
+	}
+}
