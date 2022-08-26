@@ -65,6 +65,7 @@ header > .top a.menu_icon i {
 	font-size: 40px;
 	padding-top: 5px;
 	transition: .2s ease;
+
 }
 header > .top a.menu_icon:hover i {
 	color: gray;
@@ -74,10 +75,12 @@ nav.menu {
 	min-height: calc(97vh - 121px);
 	background-color: black;
   position: absolute;
-	right: -200px;
 	transition: .4s all;
   border-radius: 20px;
+  right: 0px;
 }
+
+
 nav.menu > a {
     display: block;
     padding: 5px;
@@ -92,6 +95,9 @@ main {
 }
 .menu_show {
 	right: 0!important;
+}
+.menu_hide {
+   display: none;
 }
 @media screen and (max-width: 425px) {
 	header h1 {
