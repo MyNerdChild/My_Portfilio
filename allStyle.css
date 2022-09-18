@@ -1,21 +1,21 @@
 *{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html, body {
-    min-height: 100%;
-    min-width: 100%;
+  font-family: "Arial", sans-serif;
+  padding: 80px 30px 30px;
+  height: 100%;
+  background: #202124;
 }
 
 /*----Header----*/
 #name{
   color: white;
-  font-size: 1em;
-}
-header{
-  color: white;
+  font-size: .7em;
+  text-decoration: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -23,12 +23,11 @@ header{
   padding: 25px 20px;
   display: flex;
   justify-content: space-between;
-  font-size: 9px;
   font-family: monaco;
   align-items: center;
 }
 
-/*----Background----*/
+/*----Background----
 body{
   min-height: 100vh;
   background: #202124;
@@ -41,72 +40,6 @@ body{
   justify-content: center;
   align-items: center;
 }
-
-/*----Para. Links----*/
-a{
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-}
-
-/*-----Hamburger Menu----*/
-style* { margin: 0 auto; font-family: sans-serif; }
-
-body { margin: 0 auto; }
-
-header > .top {
-	position: absolute;
-	right: 50px;
-}
-header > .top a.menu_icon i {
-	color: white;
-	font-size: 40px;
-	padding-top: 5px;
-	transition: .2s ease;
-
-}
-header > .top a.menu_icon:hover i {
-	color: gray;
-}
-nav.menu {
-	width: 200px;
-	min-height: calc(97vh - 121px);
-	background-color: black;
-  position: absolute;
-	transition: .4s all;
-  border-radius: 20px;
-  right: 0px;
-}
+*/
 
 
-nav.menu > a {
-    display: block;
-    padding: 5px;
-    margin: 15px 0 0px 0px;
-    color: gray;
-    text-transform: uppercase;
-}
-main {
-	width: 100%;
-	padding: 300px;
-	box-sizing: border-box;
-}
-.menu_show {
-	right: 0!important;
-}
-.menu_hide {
-   display: none;
-}
-@media screen and (max-width: 425px) {
-	header h1 {
-		font-size: 16px;
-	}
-}
-@media screen and (max-width: 360px) {
-	nav.menu {
-		width: 100%;
-		left: 100%;
-	}
-}

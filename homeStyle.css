@@ -1,10 +1,10 @@
 /*----Tesxt Animation----*/
 .hero{
   display: flex;
-  margin-top: -500px;
 }
 .hero .static-txt{
   color: #fff;
+  margin-left: 300px;
   margin-top: 10px;
   font-size: 60px;
   font-weight: 400;
@@ -42,13 +42,39 @@ span::after{
   width: 100%;
   background: #202124;
   border-left: 2px solid #d19cee;
-  animation: typing 3s steps(11) infinite;
+  animation: typing 3s steps(10) infinite;
 }
 @keyframes typing {
   40%, 60%{
-    left: calc(100% + 30px);
+    left: calc(100% + 0px);
   }
   100%{
     left: 0;
   }
+}
+img{
+  margin-left: 800px;
+  margin-top: -200px;
+}
+/*----About Me Section----*/
+section h1, footer h1{
+  margin-top: 200px;
+  margin-right: 90px;
+  font-size: 30px;
+}
+
+p.Text{
+  color: aliceblue;
+  margin-top: 30px;
+
+}
+
+/*--Project Section--*/
+
+
+/*--Contact Me Section--*/
+footer .FN{
+  color: rgb(134, 128, 128);
+  margin-left: 550px;
+  font-size: 13px;
 }
