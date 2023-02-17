@@ -1,23 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
-*{
+
+* {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 
 }
+html{
 
-html, body {
+}
+
+body {
   min-height: 100%;
   min-width: 100%;
 }
 
-/*----Header----*/
-header #name{
+/*----Name/Logo----*/
+.name {
   font-size: 25px;
   font-weight: 500;
-  color: white;
+  color: #f6f4e6;
   position: absolute;
   top: 1%;
   left: 0;
@@ -30,7 +34,8 @@ header #name{
 }
 
 /*----Background----*/
-body{
+body {
+  padding: 10px;
   min-height: 100vh;
   background: #272727;
   font-family: "Montserrat", sans-serif;
@@ -42,18 +47,23 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /*border: solid;
+  border-color: white;*/
 }
 
 /*----Menu-----*/
 .navMenu {
   position: absolute;
   top: 5%;
-  left: 72%;
+  left: 87%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width:55%;
+  width: 24%;
   display: inline-block;
   text-align: center;
+
+  /* border: 5px dashed yellow; */
 }
 
 .navMenu a {
@@ -69,49 +79,85 @@ body{
 }
 
 .navMenu a:hover {
-  color: #fddb3a;
+  color: #d19cee;
 }
 
-.navMenu .dot {
-  width: 6px;
-  height: 6px;
-  background: #fddb3a;
-  border-radius: 50%;
-  opacity: 0;
-  -webkit-transform: translateX(30px);
-  transform: translateX(30px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+/*----Tesxt Animation----*/
+.hero {
+  display: flex;
+  margin-top: -299px;
+  margin-left: 50px;
+  font-size: 50px;
+  width: 100%;
+  
+  /*border: solid;
+  border-color: aqua;*/
 }
 
-.navMenu a:nth-child(1):hover ~ .dot {
-  -webkit-transform: translateX(30px);
-  transform: translateX(65px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
+.hero .static-txt {
+  color: #fff;
+  margin-top: 10px;
+  font-weight: 400;
 }
 
-.navMenu a:nth-child(2):hover ~ .dot {
-  -webkit-transform: translateX(110px);
-  transform: translateX(195px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
+.hero .dynamic-txts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
 }
 
-.navMenu a:nth-child(3):hover ~ .dot {
-  -webkit-transform: translateX(200px);
-  transform: translateX(315px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
+.dynamic-txts li {
+  list-style: none;
+  color: #d19cee;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
 }
 
-.navMenu a:nth-child(4):hover ~ .dot {
-  -webkit-transform: translateX(285px);
-  transform: translateX(435.5px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+.dynamic-txt li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+
+span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #272727;
+  border-left: 2px solid #d19cee;
+  animation: typing 3s steps(11) infinite;
+}
+
+@keyframes typing {
+
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.topSection{
+  border: 5xp dashed darkmagenta;
+}
+.info{
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  /*border: 5px dashed cadetblue;*/
 }
